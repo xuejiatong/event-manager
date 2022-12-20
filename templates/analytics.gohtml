@@ -1,0 +1,13 @@
+{{template "layout" .}}
+
+{{define "title"}}
+	Analytics
+{{end}}
+
+{{define "content"}}
+<ul>
+    {{range .Analytics}}
+        <li> {{.Category}} : {{.Count}} ({{.Percentage}}%) </li>
+    {{end}}
+</ul>
+{{end}}

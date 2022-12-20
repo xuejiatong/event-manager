@@ -1,0 +1,20 @@
+{{template "layout" .}}
+
+{{define "title"}}
+	Create a new event
+{{end}}
+
+{{define "content"}}
+<p>RSVP form:</p>
+<form method="POST">
+	<label>Title:</label><br />
+	<input type="text" name="title"><br />
+	<label>Location:</label><br />
+	<input type="text" name="location"><br />
+	<label>Image URL:</label><br />
+	<input type="text" name="image"><br />
+	<label>Date of event:</label><br />
+	<input type="datetime-local" name="date"><br />
+	<input type="submit">
+</form>
+{{end}}

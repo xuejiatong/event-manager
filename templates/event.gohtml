@@ -1,0 +1,47 @@
+{{template "layout" .}}
+
+{{define "title"}}
+	{{.Event.Title}}
+{{end}}
+
+{{define "content"}}
+<h1 class="title">{{.Event.Title}}</h1>
+<p>
+	{{.Event.Location}}
+</p>
+<p>
+	<a href="/events/{{.Event.ID}}/donate">
+		Want to donate?
+	</a>
+</p>
+<p>
+	<a href="/events/{{.Event.ID}}/support">
+		Want to support?
+	</a>
+</p>
+<p>
+	{{.Event.Date.Format "2006-01-02T15:04:05"}}
+</p>
+{{if .ConfirmationCode}}
+	<p>
+		Your confirmation code is: {{.ConfirmationCode}}
+	</p>
+{{end}}
+{{if .Errors}}
+	<p class = "errors">{{.Errors}}</p>
+{{end}}
+<ul>
+	{{range .Event.Attending}}
+		<li>
+			<p>{{.}}</p>
+		</li>
+	{{end}}
+</ul>
+<img src="{{.Event.Image}}" alt="Event Image">
+<form method="POST">
+	<label>RSVP form:</label>
+	<input type="hidden" name="event_id" value="{{.Event.ID}}">
+	<input type="text" name="name">
+	<input type="submit">
+</form>
+{{end}}

@@ -1,0 +1,21 @@
+body {
+  max-width: 960px;
+  margin: 2rem auto;
+}
+
+header {
+  background-color: #ffd943;
+}
+
+footer {
+  background-color: #e3f4fd;
+}
+
+img.som-shield {
+  height: 2em;
+  display: block;
+}
+
+input {
+  display: block;
+}
