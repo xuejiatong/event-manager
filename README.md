@@ -1,7 +1,8 @@
-# Project starter
+# Event Manager Project
 
-Ahoy! This is the project starter. I've done some
-of the hard parts for you. Good luck.
+This is our final project for the MGT660 class with Kyle @kljensen.
+We implemented a event web application where users can 
+create new event and register for events using Yale email.
 
 ## Building the project
 
